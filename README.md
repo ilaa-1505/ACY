@@ -66,3 +66,33 @@ gst-launch-1.0 v4l2src ! videoconvert ! nvegltransform ! nveglglessink
 
 gst-launch-1.0 nvarguscamerasrc sensor-id=0 ! 'video/x-raw(memory:NVMM), width=1280, height=720, framerate=30/1' ! nvvidconv ! nvoverlaysink
 
+
+
+import cv2
+
+# GStreamer pipeline for OpenCV to use
+gst_pipeline = "nvarguscamerasrc sensor-id=0 ! 'video/x-raw(memory:NVMM), width=1280, height=720, framerate=30/1' ! nvvidconv ! video/x-raw, format=BGRx ! videoconvert ! appsink"
+
+# Open the video stream using OpenCV
+cap = cv2.VideoCapture(gst_pipeline, cv2.CAP_GSTREAMER)
+
+if not cap.isOpened():
+    print("Error: Unable to open camera stream")
+else:
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            print("Error: Failed to capture frame")
+            break
+
+        # Display the captured frame
+        cv2.imshow("Camera Feed", frame)
+
+        # Exit on key press
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+    cap.release()
+    cv2.destroyAllWindows()
+
+
