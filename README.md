@@ -45,3 +45,19 @@ if __name__ == '__main__':
 [ WARN:0] global /home/nvidia/host/build_opencv/nv_opencv/modules/videoio/src/cap_gstreamer.cpp (886) open OpenCV | GStreamer warning: unable to start pipeline
 [ WARN:0] global /home/nvidia/host/build_opencv/nv_opencv/modules/videoio/src/cap_gstreamer.cpp (480) isPipelinePlaying OpenCV | GStreamer warning: GStreamer: pipeline have not been created
 
+
+import cv2
+
+cap = cv2.VideoCapture(0)  # Try 0, 1, or other indices depending on your camera
+if not cap.isOpened():
+    print("Error: Could not open camera.")
+else:
+    ret, frame = cap.read()
+    if ret:
+        cv2.imshow("Camera Feed", frame)
+        cv2.waitKey(0)
+    else:
+        print("Error: Failed to capture frame.")
+    cap.release()
+    cv2.destroyAllWindows()
+
