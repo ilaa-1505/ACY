@@ -37,3 +37,6 @@ sudo rm -f /home/capstone/Downloads/rtl8188eu/Module.symvers
 
 
 find /home/capstone/Downloads/rtl8188eu -exec stat {} \;
+
+
+https://github.com/lwfinger/rtl8188eu
