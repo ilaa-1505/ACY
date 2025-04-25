@@ -61,3 +61,4 @@ else:
     cap.release()
     cv2.destroyAllWindows()
 
+gst-launch-1.0 v4l2src ! videoconvert ! nvegltransform ! nveglglessink
