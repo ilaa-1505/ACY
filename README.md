@@ -36,3 +36,4 @@ sudo rm -rf /home/capstone/Downloads/rtl8188eu/*.ko /home/capstone/Downloads/rtl
 sudo rm -f /home/capstone/Downloads/rtl8188eu/Module.symvers
 
 
+find /home/capstone/Downloads/rtl8188eu -exec stat {} \;
