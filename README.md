@@ -27,3 +27,12 @@ cd os_dep ; rm -fr *.mod.c *.mod *.o .*.cmd *.ko
 make: warning:  Clock skew detected.  Your build may be incomplete.
 capstone@capstone-desktop:~/Downloads/rtl8188eu$ 
 
+
+
+
+
+sudo rm -rf /home/capstone/Downloads/rtl8188eu/.tmp_versions
+sudo rm -rf /home/capstone/Downloads/rtl8188eu/*.ko /home/capstone/Downloads/rtl8188eu/*.o /home/capstone/Downloads/rtl8188eu/*.mod.c
+sudo rm -f /home/capstone/Downloads/rtl8188eu/Module.symvers
+
+
