@@ -40,3 +40,14 @@ find /home/capstone/Downloads/rtl8188eu -exec stat {} \;
 
 
 https://github.com/lwfinger/rtl8188eu
+
+
+
+
+
+capstone@capstone-desktop:~/rtl8188eu$ make install
+install -p -m 644 8188eu.ko  /lib/modules/4.9.201-tegra/kernel/drivers/staging/r8188eu/
+install: cannot remove '/lib/modules/4.9.201-tegra/kernel/drivers/staging/r8188eu/8188eu.ko': Permission denied
+Makefile:161: recipe for target 'install' failed
+make: *** [install] Error 1
+
