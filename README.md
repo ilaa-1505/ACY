@@ -51,3 +51,53 @@ install: cannot remove '/lib/modules/4.9.201-tegra/kernel/drivers/staging/r8188e
 Makefile:161: recipe for target 'install' failed
 make: *** [install] Error 1
 
+
+
+
+
+capstone@capstone-desktop:~$ sudo iw dev wlan0 info
+command failed: No such device (-19)
+capstone@capstone-desktop:~$ ifconfig
+eth0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 10.127.7.145  netmask 255.255.0.0  broadcast 10.127.255.255
+        ether 48:b0:2d:2e:a5:98  txqueuelen 1000  (Ethernet)
+        RX packets 6037  bytes 6327728 (6.3 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 55  bytes 5173 (5.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 149  base 0xd000  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1  (Local Loopback)
+        RX packets 4005  bytes 326071 (326.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4005  bytes 326071 (326.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+rndis0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 22:87:03:80:82:2d  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+usb0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 22:87:03:80:82:2f  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.137.210  netmask 255.255.255.0  broadcast 192.168.137.255
+        inet6 fe80::1723:2709:c7e0:f0ee  prefixlen 64  scopeid 0x20<link>
+        ether 3c:64:cf:d3:b0:b8  txqueuelen 1000  (Ethernet)
+        RX packets 494  bytes 99112 (99.1 KB)
+        RX errors 0  dropped 14  overruns 0  frame 0
+        TX packets 291  bytes 38533 (38.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
